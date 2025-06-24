@@ -1,0 +1,26 @@
+# 构建输出
+dist/
+build/
+lib/
+es/
+
+# 依赖
+node_modules/
+.pnpm-store/
+
+# 缓存
+.cache/
+.vite/
+
+# VitePress
+.vitepress/cache/
+.vitepress/dist/
+
+# UniApp
+unpackage/
+
+# 日志文件
+*.log
+
+# 特定文件
+pnpm-lock.yaml

@@ -1,0 +1,95 @@
+{
+  "name": "uniapp-ui-lib",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A comprehensive UniApp UI component library built with Vue 3 and TypeScript",
+  "keywords": [
+    "uniapp",
+    "vue3",
+    "typescript",
+    "ui",
+    "components",
+    "mobile",
+    "cross-platform"
+  ],
+  "author": "lzk-gh",
+  "license": "MIT",
+  "homepage": "https://github.com/lzk-gh/uniapp-ui-lib#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lzk-gh/uniapp-ui-lib.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lzk-gh/uniapp-ui-lib/issues"
+  },
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*",
+    "tools/*"
+  ],
+  "engines": {
+    "node": ">=18.12.0",
+    "pnpm": ">=8.0.0"
+  },
+  "volta": {
+    "node": "22.2.0",
+    "pnpm": "10.12.2"
+  },
+  "packageManager": "pnpm@10.12.2",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "prepare": "simple-git-hooks",
+    "dev": "turbo dev",
+    "dev:playground": "turbo dev --filter=playground",
+    "dev:docs": "turbo dev --filter=docs",
+    "build": "turbo build",
+    "build:packages": "turbo build --filter='./packages/*'",
+    "build:apps": "turbo build --filter='./apps/*'",
+    "clean:deps": "rimraf --glob \"packages/*/node_modules\" node_modules",
+    "type-check": "turbo type-check",
+    "type-check:packages": "turbo type-check --filter='./packages/*'",
+    "lint": "turbo lint",
+    "lint:fix": "turbo lint:fix",
+    "test": "turbo test",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "list": "pnpm -r list --depth=0",
+    "publish": "turbo build --filter='./packages/*' && pnpm -r --filter='./packages/*' publish",
+    "publish:alpha": "turbo build --filter='./packages/*' && pnpm -r --filter='./packages/*' publish --tag alpha",
+    "publish:beta": "turbo build --filter='./packages/*' && pnpm -r --filter='./packages/*' publish --tag beta",
+    "version": "changeset version",
+    "gen:component": "tsx tools/scripts/gen-component.ts",
+    "gen:icons": "tsx packages/icons/scripts/generate-icons.ts"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.29.5",
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@types/node": "^22.15.32",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "eslint": "9.29.0",
+    "lint-staged": "^15.5.2",
+    "only-allow": "^1.2.1",
+    "picocolors": "^1.1.1",
+    "prettier": "^3.6.0",
+    "rimraf": "^6.0.1",
+    "simple-git-hooks": "^2.13.0",
+    "tsx": "^4.20.3",
+    "turbo": "2.5.4",
+    "typescript": "^5.8.3",
+    "vite": "^6.0.1",
+    "vue-tsc": "^2.1.10"
+  },
+  "peerDependencies": {
+    "vue": "^3.4.0"
+  },
+  "lint-staged": {
+    "*.{js,ts,vue,json,md,yml,yaml,css,scss}": [
+      "prettier --write"
+    ]
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  }
+}

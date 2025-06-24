@@ -1,0 +1,44 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+.pnpm-debug.log*
+
+# Volta
+.volta/
+
+# turbo
+.turbo
+
+# Build outputs
+dist/
+build/
+lib/
+es/
+
+# Cache directories
+.cache/
+.vite/
+
+# Environment files
+.env*
+
+# IDE files
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# VitePress
+.vitepress/cache/
+.vitepress/dist/
+
+# UniApp
+unpackage/
+.hbuilderx/

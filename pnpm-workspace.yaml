@@ -1,0 +1,14 @@
+# pnpm workspace 配置
+packages:
+  # 所有包目录
+  - 'packages/*'
+  - 'packages/components/*'
+  - 'apps/*'
+  - 'tools/*'
+
+# 排除某些目录避免被当作包处理
+exclude:
+  - '**/node_modules/**'
+  - '**/dist/**'
+  - '**/.vitepress/cache/**'
+  - '**/.vitepress/dist/**'
