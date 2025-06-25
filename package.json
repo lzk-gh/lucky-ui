@@ -84,12 +84,13 @@
   "peerDependencies": {
     "vue": "^3.4.0"
   },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged",
+    "commit-msg": "node scripts/verify-commit.js $1"
+  },
   "lint-staged": {
     "*.{js,ts,vue,json,md,yml,yaml,css,scss}": [
       "prettier --write"
     ]
-  },
-  "simple-git-hooks": {
-    "pre-commit": "pnpm lint-staged"
   }
 }
