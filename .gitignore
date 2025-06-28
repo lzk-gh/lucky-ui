@@ -42,3 +42,8 @@ Thumbs.db
 # UniApp
 unpackage/
 .hbuilderx/
+
+# Test coverage
+coverage/
+**/coverage/
+*.lcov

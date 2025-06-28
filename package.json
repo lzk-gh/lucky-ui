@@ -1,5 +1,5 @@
 {
-  "name": "uniapp-ui-lib",
+  "name": "lucky-ui",
   "version": "1.0.0",
   "type": "module",
   "description": "A comprehensive UniApp UI component library built with Vue 3 and TypeScript",
@@ -14,13 +14,13 @@
   ],
   "author": "lzk-gh",
   "license": "MIT",
-  "homepage": "https://github.com/lzk-gh/uniapp-ui-lib#readme",
+  "homepage": "https://github.com/lzk-gh/lucky-ui#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/lzk-gh/uniapp-ui-lib.git"
+    "url": "https://github.com/lzk-gh/lucky-ui.git"
   },
   "bugs": {
-    "url": "https://github.com/lzk-gh/uniapp-ui-lib/issues"
+    "url": "https://github.com/lzk-gh/lucky-ui/issues"
   },
   "private": true,
   "workspaces": [
@@ -51,7 +51,12 @@
     "type-check:packages": "turbo type-check --filter='./packages/*'",
     "lint": "turbo lint",
     "lint:fix": "turbo lint:fix",
-    "test": "turbo test",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:run": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "test:watch": "vitest --watch",
+    "test:packages": "turbo test --filter='./packages/*'",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "list": "pnpm -r list --depth=0",
@@ -66,19 +71,27 @@
     "@changesets/cli": "^2.29.5",
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
+    "@types/jsdom": "^21.1.7",
     "@types/node": "^22.15.32",
     "@vitejs/plugin-vue": "^5.2.1",
+    "@vitest/coverage-v8": "^3.2.4",
+    "@vitest/ui": "^3.2.4",
+    "@vue/test-utils": "^2.4.6",
     "eslint": "9.29.0",
+    "happy-dom": "^18.0.1",
+    "jsdom": "^26.1.0",
     "lint-staged": "^15.5.2",
     "only-allow": "^1.2.1",
     "picocolors": "^1.1.1",
     "prettier": "^3.6.0",
     "rimraf": "^6.0.1",
     "simple-git-hooks": "^2.13.0",
+    "tsup": "^8.5.0",
     "tsx": "^4.20.3",
     "turbo": "2.5.4",
     "typescript": "^5.8.3",
     "vite": "^6.0.1",
+    "vitest": "^3.2.4",
     "vue-tsc": "^2.1.10"
   },
   "peerDependencies": {

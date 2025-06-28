@@ -1,0 +1,32 @@
+{
+  "name": "@lucky-ui/core",
+  "version": "1.0.0",
+  "description": "Core utilities for lucky-ui",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "es"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "type-check": "vue-tsc --noEmit"
+  },
+  "keywords": [
+    "uniapp",
+    "utils",
+    "typescript"
+  ],
+  "peerDependencies": {
+    "vue": "^3.4.0"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "vitest": "^3.2.4",
+    "vue-tsc": "^2.1.10"
+  }
+}
