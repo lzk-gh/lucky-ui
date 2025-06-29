@@ -21,6 +21,9 @@ importers:
       '@commitlint/config-conventional':
         specifier: ^19.8.1
         version: 19.8.1
+      '@dcloudio/types':
+        specifier: ^3.4.15
+        version: 3.4.15
       '@types/jsdom':
         specifier: ^21.1.7
         version: 21.1.7
@@ -95,11 +98,14 @@ importers:
         version: 3.5.17(typescript@5.8.3)
     devDependencies:
       tsup:
-        specifier: ^8.5.0
+        specifier: ^8.0.0
         version: 8.5.0(jiti@2.4.2)(postcss@8.5.6)(tsx@4.20.3)(typescript@5.8.3)(yaml@2.8.0)
       vitest:
         specifier: ^3.2.4
         version: 3.2.4(@types/node@22.15.32)(@vitest/ui@3.2.4)(happy-dom@18.0.1)(jiti@2.4.2)(jsdom@26.1.0)(tsx@4.20.3)(yaml@2.8.0)
+      vue-tsc:
+        specifier: ^2.1.10
+        version: 2.2.10(typescript@5.8.3)
 
 packages:
 
@@ -290,6 +296,9 @@ packages:
   '@csstools/css-tokenizer@3.0.4':
     resolution: {integrity: sha512-Vd/9EVDiu6PPJt9yAh6roZP6El1xHrdvIVGjyBsHR0RYwNHgL7FJPyIIW4fANJNG6FtyZfvlRPpFI4ZM/lubvw==}
     engines: {node: '>=18'}
+
+  '@dcloudio/types@3.4.15':
+    resolution: {integrity: sha512-Y8n/Z7USQoYFWUYZBLVjLXV3G5E/Odnvy3Ldgri4ikCcyQqHRk6RRaLh0WWnuIkxQxz2MXqLH4JNN65sb00XIA==}
 
   '@esbuild/aix-ppc64@0.25.5':
     resolution: {integrity: sha512-9o3TMmpmftaCMepOdA5k/yDw8SfInyzWWTjYTFCX3kPSDJMROQTb8jg+h9Cnwnmm1vOzvxN7gIfB5V2ewpjtGA==}
@@ -2761,6 +2770,8 @@ snapshots:
       '@csstools/css-tokenizer': 3.0.4
 
   '@csstools/css-tokenizer@3.0.4': {}
+
+  '@dcloudio/types@3.4.15': {}
 
   '@esbuild/aix-ppc64@0.25.5':
     optional: true

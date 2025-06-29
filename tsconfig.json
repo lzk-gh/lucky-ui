@@ -14,7 +14,12 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "types": ["vitest/globals", "jsdom", "@testing-library/jest-dom"],
+    "types": [
+      "vitest/globals",
+      "jsdom",
+      "@testing-library/jest-dom",
+      "@dcloudio/types"
+    ],
     "baseUrl": ".",
     "paths": {
       "@/*": ["./packages/*"],
